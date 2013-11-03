@@ -388,7 +388,7 @@ External Resources
 
 * [Gist about Synchronous and asynchronous loading of external handlebars templates](https://gist.github.com/2287070)
 
-Have a project using Handlebars? Send us a [pull request](https://github.com/wycats/handlebars.js/pull/new/master)!
+Have a project using Handlebars? Send us a [pull request][pull-request]!
 
 Helping Out
 -----------
@@ -411,8 +411,27 @@ Feel free to contact commondream or wycats through GitHub with any other
 questions or feature requests. To submit changes fork the project and
 send a pull request.
 
+### Ember testing
+
+The current ember distribute should be tested as part of the handlebars release process. This requires building the `handlebars-source` gem locally and then executing the ember test script.
+
+```sh
+grunt
+cd dist/
+gem build handlebars-source.gemspec
+gem install handlebars-source-*.gem
+
+cd $emberRepoDir
+bundle exec rake test
+```
+
+Note that the version of the spec file must match the version [expected][ember-handlebars-version] by the ember test libraries.
+
+
 License
 -------
 Handlebars.js is released under the MIT license.
 
 [builds-page]: http://builds.handlebarsjs.com.s3.amazonaws.com/index.html
+[pull-request]: https://github.com/wycats/handlebars.js/pull/new/master
+[ember-handlebars-version]: https://github.com/emberjs/ember.js/blob/master/ember-source.gemspec#L16
