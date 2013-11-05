@@ -417,7 +417,7 @@ The current ember distribute should be tested as part of the handlebars release 
 
 ```sh
 grunt
-cd dist/
+cd dist/components/
 gem build handlebars-source.gemspec
 gem install handlebars-source-*.gem
 
