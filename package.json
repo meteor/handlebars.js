@@ -14,8 +14,7 @@
     "node": ">=0.4.7"
   },
   "dependencies": {
-    "optimist": "~0.3",
-    "uglify-js": "~1.2"
+    "optimist": "~0.3"
   },
   "devDependencies": {
     "mocha": "*"
